@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    /* File Layout */
+    "rootDir": "src",
+    "outDir": "dist",
+
+    /* Module/Env (Node ESM) */
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
+    /* Node typings */
+    "lib": ["ESNext", "DOM"],
+    "types": ["node"],
+
+    /* Outputs */
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    /* Type Safety */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    /* Interop/Features */
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+
+    /* Misc */
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
