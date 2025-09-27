@@ -1,12 +1,18 @@
 {
   "name": "windows-explorer",
+  "private": true,
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Monorepo for Windows Explorer challenge",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently \"npm run dev -w apps/frontend\" \"npm run dev -w apps/backend\"",
+    "dev:fe": "npm run dev -w apps/frontend",
+    "dev:be": "npm run dev -w apps/backend"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
 }
